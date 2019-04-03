@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UsabilityLogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Z4J-fd-r8t">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="497"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="671-Ws-t9Z" customClass="CounterView" customModule="UsabilityLogger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="497"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Navigations"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Oxc-wX-vcR" customClass="CounterView" customModule="UsabilityLogger" customModuleProvider="target">
+                                        <rect key="frame" x="256" y="0.0" width="256" height="497"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Presses"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="d5g-Bx-Awy" customClass="CounterView" customModule="UsabilityLogger" customModuleProvider="target">
+                                        <rect key="frame" x="512" y="0.0" width="256" height="497"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Questions"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="bhI-o3-SeL" customClass="CounterView" customModule="UsabilityLogger" customModuleProvider="target">
+                                        <rect key="frame" x="768" y="0.0" width="256" height="497"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Attempts"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-WW-bIh" customClass="StopWatchView" customModule="UsabilityLogger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="517" width="1024" height="147"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrX-VS-Cuy">
+                                <rect key="frame" x="448" y="684" width="128" height="64"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Ha2-i2-9xE"/>
+                                    <constraint firstAttribute="width" constant="128" id="cZO-Dk-wNx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R1d-wh-S1z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XrX-VS-Cuy" secondAttribute="bottom" constant="20" id="3uj-SW-HQd"/>
+                            <constraint firstItem="Z4J-fd-r8t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4xc-zv-Aop"/>
+                            <constraint firstItem="Z4J-fd-r8t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="51f-QN-obm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gaJ-WW-bIh" secondAttribute="trailing" id="OTD-hW-9BI"/>
+                            <constraint firstItem="XrX-VS-Cuy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ojr-Ol-ekb"/>
+                            <constraint firstItem="XrX-VS-Cuy" firstAttribute="top" secondItem="gaJ-WW-bIh" secondAttribute="bottom" constant="20" id="X7t-kQ-D0l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z4J-fd-r8t" secondAttribute="trailing" id="eeN-jy-FbZ"/>
+                            <constraint firstItem="gaJ-WW-bIh" firstAttribute="top" secondItem="Z4J-fd-r8t" secondAttribute="bottom" id="oxZ-AH-PIT"/>
+                            <constraint firstItem="gaJ-WW-bIh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qGv-tD-0SV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="stopWatch" destination="gaJ-WW-bIh" id="auw-Mf-HmX"/>
+                        <outletCollection property="counters" destination="671-Ws-t9Z" collectionClass="NSMutableArray" id="PL3-m4-8rU"/>
+                        <outletCollection property="counters" destination="Oxc-wX-vcR" collectionClass="NSMutableArray" id="s2x-iZ-mVx"/>
+                        <outletCollection property="counters" destination="d5g-Bx-Awy" collectionClass="NSMutableArray" id="TJW-ZT-j7I"/>
+                        <outletCollection property="counters" destination="bhI-o3-SeL" collectionClass="NSMutableArray" id="BE1-KP-VeN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14.648437499999998" y="22.65625"/>
+        </scene>
+    </scenes>
+</document>
